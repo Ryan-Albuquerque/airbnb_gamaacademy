@@ -65,14 +65,6 @@ setInterval(() => {
         modalCounter();
         
       };
-
-      var submit = document.querySelector("#submitModal")
-
-        submit.addEventListener("click", ()=>{
-            const closeModal = confirm("Estadia confirmada com sucesso!\nAgradecemos a preferência.")
-            closeModal ? modal.style.display = "none" : console.log('erro');
-            
-        })
       modalContent();
     });
     
@@ -82,4 +74,12 @@ setInterval(() => {
   close.addEventListener("click", () => {
     modal.style.display = "none";
   });
+  
 }, 1000);
+var submit = document.querySelector("#submitModal");
+var modal = document.querySelector(".modal");
+submit.addEventListener("click", () => {
+  alert("Estadia confirmada com sucesso!\nAgradecemos a preferência.");
+  modal.style.display = "none";
+  window.reload()
+});
