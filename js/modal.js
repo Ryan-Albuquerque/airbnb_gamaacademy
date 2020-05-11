@@ -81,5 +81,5 @@ var modal = document.querySelector(".modal");
 submit.addEventListener("click", () => {
   alert("Estadia confirmada com sucesso!\nAgradecemos a preferência.");
   modal.style.display = "none";
-  window.reload()
+  
 });
